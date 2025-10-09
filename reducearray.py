@@ -1,4 +1,4 @@
-cells=[10,20,30 ]
+cells=[10,20,30]
 import heapq
 def f(arr):
     heapq.heapify(arr)
