@@ -22,9 +22,7 @@ def f(s):
     f=len(s)%2
     while len(x)>f:
         a,b=x.popleft(),x.pop()
-        j=min(a,b)
-        r[j]+=2;r[a]-=1;r[b]-=1
-        if r[a]==0: r.pop(a)
+        r[a]+=1;r[b]-=1
         if r[b]==0: r.pop(b)
     g="".join(i*(j//2) for i,j in sorted(r.items()))
     return g+(x[0] if x else "")+g[::-1]

@@ -11,7 +11,7 @@ def f(n,x,r):
             if nde in vis: continue
             vis.add(nde)
             for i in x[nde]: 
-                if i in vis: continue
+                if i in vis or i==nde: continue
                 q.append(i)
         l+=1
     return l
@@ -23,3 +23,6 @@ def merge(n1,af,at,n2,bf,bt):
     net1=min(f(n1,x,i) for i in range(1,n1+1))
     net2=min(f(n2,y,i) for i in range(1,n2+1))
     return net1+net2+1
+
+print(merge(3,[1,1],[2,3],3,[1,2],[2,3]))
+print(merge(4,[1,1,1],[2,3,4],2,[1],[2]))
