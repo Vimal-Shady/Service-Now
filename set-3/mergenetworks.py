@@ -16,7 +16,7 @@ from collections import deque
 #                 q.append(i)
 #         l+=1
 #     return l
-
+# O(N+E)
 def f(n,x,r):
     q=deque([(r,0)])
     vis=set()
